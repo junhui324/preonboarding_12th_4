@@ -1,0 +1,26 @@
+.container {
+	margin-top: 10px;
+	box-sizing: border-box;
+	padding: 20px 0px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 20px;
+
+	.subTitle {
+		color: #6a737b;
+		font-size: 13px;
+		margin: 0;
+		padding-left: 30px;
+	}
+
+	.list {
+		list-style: none;
+		margin: 20px 0 0 0;
+		padding: 0;
+
+		.nolist {
+			padding-left: 30px;
+			color: #6a737b;
+		}
+	}
+}

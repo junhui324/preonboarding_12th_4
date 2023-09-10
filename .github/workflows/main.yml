@@ -1,0 +1,31 @@
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - if: ${{ github.event.issue }}
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'add-assignees'
+          assignees: ${{ github.event.issue.user.login }}
+          token: ${{ secrets.TOKEN }}
+
+      - if: ${{ github.event.pull_request }}
+        uses: hkusu/review-assign-action@v1
+        with:
+          assignees: ${{ github.event.pull_request.user.login }}
+          reviewers: ${{ vars.REVIEWERS }}
+          github-token: ${{ secrets.TOKEN }}
+
+  project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@main
+        with:
+          project-url: ${{ vars.PROJECT_URL }}
+          github-token: ${{ secrets.TOKEN }}
