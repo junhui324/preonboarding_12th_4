@@ -1,0 +1,15 @@
+// CustomTooltip.scss
+
+.customTooltip {
+	p {
+		&.id {
+			color: blue;
+		}
+		&.area {
+			color: green;
+		}
+		&.bar {
+			color: red;
+		}
+	}
+}
