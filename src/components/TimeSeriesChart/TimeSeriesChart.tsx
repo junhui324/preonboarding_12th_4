@@ -52,6 +52,11 @@ function TimeSeriesChart() {
 		setUniqueIds(uniqueIds);
 	};
 
+	const handleBarClick = (data: any) => {
+		const clickedID = data.id;
+		setSelectedID(clickedID);
+	};
+
 	return (
 		<div>
 			<FilterButton uniqueIds={uniqueIds} selectedID={selectedID} setSelectedID={setSelectedID} />
@@ -68,9 +73,18 @@ function TimeSeriesChart() {
 					/>
 					<Tooltip content={<CustomTooltip />} />
 
-					<Bar dataKey="value_bar" fill={COLOR.BAR} name="Bar" yAxisId="right">
+					<Bar
+						dataKey="value_bar"
+						fill={COLOR.BAR}
+						name="Bar"
+						yAxisId="right"
+						onClick={handleBarClick}
+					>
 						{chartData.map((entry, index) => (
-							<Cell fill={entry.id === selectedID ? COLOR.HIGHLIGHTED_BAR : COLOR.BAR} />
+							<Cell
+								key={index}
+								fill={entry.id === selectedID ? COLOR.HIGHLIGHTED_BAR : COLOR.BAR}
+							/>
 						))}
 					</Bar>
 					<YAxis yAxisId="right" orientation="right" stroke={COLOR.BAR} />
