@@ -1,15 +1,23 @@
-// CustomTooltip.scss
-
 .customTooltip {
+	width: 200px;
+	height: 110px;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	padding-top: 3px;
+	padding-left: 10px;
+	opacity: 0.8;
 	p {
+		margin: 0;
+		padding: 2px;
+		opacity: 1;
 		&.id {
-			color: blue;
+			color: #3c188f;
 		}
 		&.area {
-			color: green;
+			color: #ff8989;
 		}
 		&.bar {
-			color: red;
+			color: #8884d8;
 		}
 	}
 }
