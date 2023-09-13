@@ -27,7 +27,7 @@ $ npm start
 
 ### 구현 영상
 
-<img width="400" alt="issueList_gif" src="https://github.com/preOnBorading-Idle/pre-onboarding-12th-3-18/assets/101536766/e3c26e96-af44-4792-8d0b-5a23de39df0b" />
+<img width="700" alt="gif" src="https://github.com/junhui324/preonboarding_12th_4/assets/122953242/c9a67ebb-fa5b-43ee-af1f-400ce9e9d95c" />
 
 ## ✨ 기능 구현 이슈
 
