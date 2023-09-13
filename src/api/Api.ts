@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { URL } from '../constants/constants';
 
 const instance = axios.create({
-	baseURL: `/mook`,
+	baseURL: URL,
 });
 
 export const getData = async () => {

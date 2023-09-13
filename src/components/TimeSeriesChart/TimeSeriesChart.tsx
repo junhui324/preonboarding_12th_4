@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getData } from '../../api/Api';
 import FilterButton from './FilterButton';
 import styles from './TimeSeriesChart.module.scss';
@@ -30,7 +30,7 @@ function TimeSeriesChart() {
 			const response = await getData();
 			changeRechartsData(response);
 		} catch (error) {
-			console.error('데이터를 불러오는 중 오류 발생:', error);
+			console.error('데이터를 불러오지 못했습니다 : ', error);
 		}
 	};
 

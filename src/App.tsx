@@ -1,9 +1,10 @@
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ROUTES } from './constants/constants';
-import Main from './pages/MainPage/Main';
-import NotFound from './pages/NotFoundPage/NotFound';
-import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
+
+const Main = lazy(() => import('./pages/MainPage/Main'));
+const LoadingSpinner = lazy(() => import('./components/LoadingSpinner/LoadingSpinner'));
+const NotFound = lazy(() => import('./pages/NotFoundPage/NotFound'));
 
 function App() {
 	return (
