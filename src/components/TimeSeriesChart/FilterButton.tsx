@@ -13,6 +13,9 @@ function FilterButton({ uniqueIds, selectedID, setSelectedID }: FilterButtonProp
 	};
 	return (
 		<div className={styles.filterButtons}>
+			<button onClick={() => setSelectedID('')} className={styles.button}>
+				해제
+			</button>
 			{uniqueIds
 				? uniqueIds.map(id => (
 						<button
