@@ -23,7 +23,7 @@ $ npm start
 
 ### 배포 링크
 
-🔗 [배포 링크](http://preonboarding-frontend-12th-jk.s3-website.ap-northeast-2.amazonaws.com/)
+🔗 [배포 링크](https://preonboarding-12th-4-time-series-chart-a2humox7t-junhui324.vercel.app/)
 
 ### 구현 영상
 
@@ -183,8 +183,8 @@ function CustomTooltip({ active, payload, label }: any) {
 
 ### Library
 
-<img src="https://img.shields.io/badge/scss-CC6699?style=for-the-badge&logo=sass&logoColor=white"> <img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white"/>
+<img src="https://img.shields.io/badge/scss-CC6699?style=for-the-badge&logo=sass&logoColor=white"> <img src="https://img.shields.io/badge/React Router-CA4245?style=for-the-badge&logo=React Router&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white"/> <img src="https://img.shields.io/badge/Recharts-00A7B3?style=for-the-badge&logo=Recharts&logoColor=white"/>
 
 ### Deploy
 
-<!-- <img src="https://img.shields.io/badge/amazonec2-FF9900?style=for-the-badge&logo=AmazonEC2&logoColor=white"> <img src="https://img.shields.io/badge/amazons3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"> -->
+<img src="https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
