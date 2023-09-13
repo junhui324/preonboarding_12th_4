@@ -3,6 +3,7 @@ import { getData } from '../../api/Api';
 import FilterButton from './FilterButton';
 import styles from './TimeSeriesChart.module.scss';
 import { COLOR } from '../../constants/constants';
+import getDate from '../../utils/getDate';
 import {
 	ComposedChart,
 	Bar,
@@ -20,6 +21,7 @@ function TimeSeriesChart() {
 	const [chartData, setChartData] = useState<any[]>([]);
 	const [uniqueIds, setUniqueIds] = useState<string[]>();
 	const [selectedID, setSelectedID] = useState<string | null>(null);
+	const [date, setDate] = useState('');
 
 	useEffect(() => {
 		fetchData();
@@ -50,6 +52,7 @@ function TimeSeriesChart() {
 
 		setChartData(newChartData);
 		setUniqueIds(uniqueIds);
+		getDate(response, setDate);
 	};
 
 	const handleBarClick = (data: any) => {
@@ -62,7 +65,10 @@ function TimeSeriesChart() {
 			<FilterButton uniqueIds={uniqueIds} selectedID={selectedID} setSelectedID={setSelectedID} />
 			<ResponsiveContainer width="100%" height={400}>
 				<ComposedChart data={chartData}>
-					<XAxis dataKey="timestamp" />
+					<XAxis
+						dataKey="timestamp"
+						label={{ value: `${date}`, position: 'insideBottomLeft', dx: -20, dy: 20 }}
+					/>
 					<CartesianGrid stroke={COLOR.WHITE_GRAY} />
 					<Legend
 						payload={[
