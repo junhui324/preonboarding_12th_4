@@ -1,0 +1,19 @@
+@mixin buttonStyle {
+	margin: 10px;
+	margin-bottom: 40px;
+	border: none;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+.button {
+	@include buttonStyle;
+	background-color: rgb(67, 167, 167);
+}
+
+.selectedButton {
+	@include buttonStyle;
+	background-color: rgb(43, 199, 199);
+	font-weight: 700;
+}
