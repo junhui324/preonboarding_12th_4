@@ -23,7 +23,7 @@ $ npm start
 
 ### 배포 링크
 
-🔗 [배포 링크](https://preonboarding-12th-4-time-series-chart-a2humox7t-junhui324.vercel.app/)
+🔗 [배포 링크](https://preonboarding-12th-4-time-series-chart.vercel.app/)
 
 ### 구현 영상
 
