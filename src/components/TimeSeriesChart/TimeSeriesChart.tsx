@@ -94,9 +94,36 @@ function TimeSeriesChart() {
 							/>
 						))}
 					</Bar>
-					<YAxis yAxisId="right" orientation="right" stroke={COLOR.BAR} />
+					<YAxis
+						yAxisId="right"
+						orientation="right"
+						stroke={COLOR.BAR}
+						tick={{ fontSize: 13 }}
+						label={{
+							value: `bar`,
+							position: 'insideLeft',
+							fontSize: 13,
+							angle: -90,
+							dx: 50,
+							dy: 10,
+						}}
+					/>
 					<Area type="monotone" dataKey="value_area" fill={COLOR.AREA} name="Area" yAxisId="left" />
-					<YAxis yAxisId="left" orientation="left" stroke={COLOR.AREA} domain={[0, 200]} />
+					<YAxis
+						yAxisId="left"
+						orientation="left"
+						stroke={COLOR.AREA}
+						tick={{ fontSize: 14 }}
+						domain={[0, 200]}
+						label={{
+							value: `area`,
+							position: 'insideLeft',
+							fontSize: 13,
+							angle: -90,
+							dx: 10,
+							dy: 10,
+						}}
+					/>
 				</ComposedChart>
 			</ResponsiveContainer>
 		</div>
