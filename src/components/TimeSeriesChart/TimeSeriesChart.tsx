@@ -67,14 +67,15 @@ function TimeSeriesChart() {
 				<ComposedChart data={chartData}>
 					<XAxis
 						dataKey="timestamp"
-						label={{ value: `${date}`, position: 'insideBottomLeft', dx: -20, dy: 20 }}
+						tick={{ fontSize: 14 }}
+						label={{ value: `${date}`, position: 'insideBottomLeft', dx: -20, dy: 18 }}
 					/>
 					<CartesianGrid stroke={COLOR.WHITE_GRAY} />
 					<Legend
 						payload={[
-							{ value: 'Area', type: 'rect', color: COLOR.AREA },
+							{ value: 'Area', type: 'line', color: COLOR.AREA },
 							{ value: 'Bar', type: 'rect', color: COLOR.BAR },
-							{ value: 'Highlighted Bar', type: 'rect', color: COLOR.HIGHLIGHTED_BAR },
+							{ value: 'Selected  Bar', type: 'rect', color: COLOR.HIGHLIGHTED_BAR },
 						]}
 					/>
 					<Tooltip content={<CustomTooltip />} />
